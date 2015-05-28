@@ -43,6 +43,8 @@ public class DBConnection {
         }
     }
 
+
+
     private void loadPreparedStatements() {
         try {
             loadAllRoles = conn.prepareStatement("SELECT * FROM roles");
@@ -262,7 +264,7 @@ public class DBConnection {
                 Student r = new Student();
                 r.setId(rs.getInt("id"));
                 r.setName(rs.getString("name"));
-                r.setFirst_name(rs.getString("lastName"));
+                r.setLast_name(rs.getString("last_name"));
                 r.setDate(rs.getTimestamp("date"));
                 r.setGroup(rs.getString("groupe"));
                 result.add(r);

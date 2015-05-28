@@ -1,5 +1,7 @@
 package services.impl;
 
+import dao.StudentsDao;
+import dao.impl.StudentDaoImpl;
 import entity.Student;
 import services.StudentService;
 
@@ -10,7 +12,8 @@ import java.util.List;
  */
 public class StudentServiceImpl implements StudentService {
 
-    private
+    private StudentsDao studentsDao = new StudentDaoImpl();
+
     @Override
     public boolean studentModifing(int idStudent) {
         return false;
@@ -28,7 +31,7 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public List<Student> getStudents() {
-        return null;
+        return studentsDao.getStudents();
     }
 
     @Override

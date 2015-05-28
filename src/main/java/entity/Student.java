@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Student extends AbstractModelIdName{
 
-	private String first_name;
+	private String last_name;
 	private	String group;
 	private Date date;
 	
@@ -12,19 +12,19 @@ public class Student extends AbstractModelIdName{
 		super();
 	}
 	
-	public Student(Integer id, String name, String first_name, String group, Date date){
+	public Student(Integer id, String name, String last_name, String group, Date date){
 		super(id, name);
-		this.first_name = first_name;
+		this.last_name = last_name;
 		this.group = group;
 		this.date = date;
 	}
 
-	public String getFirst_name() {
-		return first_name;
+	public String getLast_name() {
+		return last_name;
 	}
 
-	public void setFirst_name(String first_name) {
-		this.first_name = first_name;
+	public void setLast_name(String first_name) {
+		this.last_name = first_name;
 	}
 
 	public String getGroup() {

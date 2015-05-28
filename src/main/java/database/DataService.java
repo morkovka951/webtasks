@@ -120,15 +120,18 @@ public class DataService{
         this.putDBConnection(conn);
         return selectById;
     }
-	public void close() {
-		
-	}
 
+    //Students
     public List<Student> getStudentsList(){
         DBConnection conn = getDBConnection();
         List <Student> result = conn.getListStudents();
         this.putDBConnection(conn);
         return result;
-
     }
+
+	public void close() {
+		
+	}
+
+
 }
